@@ -8,11 +8,11 @@ class COLORS(Enum):
 
 class COUNTRIES(Enum):
     DK = "Danemark"
-    GDR = "East Germany"
-    NL = "Nederlands"
+    DDR = "Ost Deutschland"
+    NL = "Nederland"
     PL = "Poland"
-    CZ = "Czechoslovakia"
-    FRG = "West Germany"
+    CZ = "Československo"
+    DE = "West Deutschland"
 
 
 class TEAMS(Enum):
