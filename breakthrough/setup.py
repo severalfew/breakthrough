@@ -20,6 +20,13 @@ def retrieve_locations():
         data["city_size"] = row["city_size"]
         data["team"] = row["team"]
         data["country"] = row["country"]
+        if "city" not in data.keys():
+            data["city"] = row['name']
+        data['display_x'] = data['x'] * 138.15846723809852 - 466.7843618496411
+        data['display_y'] = data['y'] * 223.7003946611845 - 11293.081791485833
+        for key in list(data.keys()):
+            if ":" in key:
+                data[key.replace(":", "_")] = data.pop(key)
         with open(location_file, "w") as fp:
             json.dump(data, fp)
 

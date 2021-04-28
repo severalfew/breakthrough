@@ -1,33 +1,45 @@
 from .constants import COLORS, COUNTRIES, TEAMS
 from enum import Enum
-import pandas as pd
-import pyglet
+import json
 import os
+import pyglet
 
 
 class CITY_SIZES(Enum):
     village = 1
     town = 2
     city = 3
+    lager = 4
     metropolis = 5
 
 
 class Location:
-    def __init__(self, name, country, team, city_size, x, y):
-        self.name = name
-        assert country in COUNTRIES, f"Country must be one of {COUNTRIES}"
-        self.country = country
-        assert team in TEAMS, f"Team must be one of {TEAMS}"
-        self.team = team
-        assert city_size in CITY_SIZES, f"Value must be one of {CITY_SIZES}"
-        self.value = city_size
+    def __init__(self, city, country, team, city_size, x, y, **kwargs):
+        self.name = city
+        self.country = getattr(COUNTRIES, country)
+        self.team = getattr(TEAMS, team)
+        self.value = getattr(CITY_SIZES, city_size)
         self.x = x
         self.y = y
+        for key, value in kwargs.items():
+            setattr(self, key, value)
         self.sprite = self.create_sprite()
 
     def create_sprite(self):
-        return pyglet.shapes.Circle(self.x, self.y, radius=5 * self.value, color=COLORS[self.team])
+        sprite = pyglet.shapes.Circle(
+            getattr(self, "display_x", self.x),
+            getattr(self, "display_y", self.x),
+            radius=5 * self.value.value,
+            color=getattr(COLORS, self.team.name).value
+        )
+        sprite.opacity = 200
+        return sprite
 
 
-df = pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "locations.csv"))
-locations = [Location(**row) for i, row in df.iterrows()]
+location_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "resources", "locations")
+locations = []
+for loc_file in os.listdir(location_path):
+    if not loc_file.endswith(".json"):
+        continue
+    with open(os.path.join(location_path, loc_file), "r") as fp:
+        locations.append(Location(**json.load(fp)))

@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import IntEnum
 from .constants import COUNTRIES, TEAMS
 
 
-class UNIT_SIZES(Enum):
+class UNIT_SIZES(IntEnum):
     division = 3
     brigade = 2
     regiment = 1

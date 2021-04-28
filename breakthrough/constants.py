@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, IntEnum
 
 
 class COLORS(Enum):
@@ -15,6 +15,6 @@ class COUNTRIES(Enum):
     DE = "West Deutschland"
 
 
-class TEAMS(Enum):
+class TEAMS(IntEnum):
     NATO = 1
     PACT = 2
