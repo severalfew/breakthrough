@@ -9,7 +9,7 @@ class CITY_SIZES(Enum):
     village = 1
     town = 2
     city = 3
-    lager = 4
+    base = 4
     metropolis = 5
 
 

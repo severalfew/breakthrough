@@ -1,0 +1,40 @@
+Army Group Headquarters
+    British rear and communications zones
+        Commander Engineers BAOR
+        Commander Postal & Courier Service BAOR
+        Commander Communications BAOR
+        Commander Transport & Movements BAOR
+        Commander Medical BAOR
+        Commander Supply BAOR
+        Commander Maintenance BAOR
+        Provost Marshal BAOR
+        HQ Intelligence & Security Group (Germany)
+    I Netherlands Corps
+        1e Divisie
+        3rd Panzer Division
+        4e Divisie
+        5e Divisie
+        101e Infanteriebrigade
+        I (NL) Corps Artillery
+        I (NL) Corps Logistic Command
+    I German Corps
+        1st Panzer Division
+        7th Panzer Division
+        11th Panzergrenadier Division
+        27th Airborne Brigade
+    1 British Corps
+        1st Armoured Division
+        2nd Infantry Division
+        3rd Armoured Division
+        4th Armoured Division
+    I Belgian Corps
+        1er Division d'Infanterie
+        16de Pantserdivisie
+    Northern Territorial Command
+    III US Corps
+        1st Cavalry Division
+        2nd Armored Division
+        5th Infantry Division (Mechanized)
+        3rd Armored Cavalry
+        III Corps Artillery
+        13th Corps Support Command

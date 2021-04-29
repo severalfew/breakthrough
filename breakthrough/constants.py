@@ -7,7 +7,7 @@ class COLORS(Enum):
 
 
 class COUNTRIES(Enum):
-    DK = "Danemark"
+    DK = "Danmark"
     DDR = "Ost Deutschland"
     NL = "Nederland"
     PL = "Poland"
