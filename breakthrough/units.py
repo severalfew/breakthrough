@@ -1,5 +1,6 @@
-from enum import IntEnum
 from .constants import COUNTRIES, TEAMS
+from enum import IntEnum
+from jsonschema import validate
 
 
 class UNIT_SIZES(IntEnum):
@@ -9,6 +10,20 @@ class UNIT_SIZES(IntEnum):
     battallion = 0
     battery = 0
     company = 0
+    administrative = 4
+
+
+unit_schema = {
+    "type": "object",
+    "properties": {
+        "name": {"type": "object"},
+        "location": {"type": "object"},
+        "size": {"type": "object"},
+        "team": {"type": "object"},
+        "type": {"type": "object"},
+        "units": {"type": "list"},
+    }
+}
 
 
 class Unit:

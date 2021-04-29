@@ -1,0 +1,328 @@
+[
+  {
+    "name": "GDR Military District V (North)",
+    "country": "GDR",
+    "location": "Neubrandenburg",
+    "size": "administrative",
+    "team": "PACT",
+    "type": "administrative",
+    "units": [
+      {
+        "name": "1st Motor Rifle Division",
+        "country": "GDR",
+        "location": "Potsdam",
+        "size": "division",
+        "team": "PACT",
+        "type": "infantry"
+      },
+      {
+        "name": "8th Motor Rifle Division",
+        "country": "GDR",
+        "location": "Schwerin",
+        "size": "division",
+        "team": "PACT",
+        "type": "infantry"
+      },
+      {
+        "name": "9th Panzer Division",
+        "country": "GDR",
+        "location": "Eggesin",
+        "size": "division",
+        "team": "PACT",
+        "type": "armor"
+      },
+      {
+        "name": "19th Motor Rifle Division",
+        "country": "GDR",
+        "location": "Wulkow",
+        "size": "division",
+        "team": "PACT",
+        "type": "infantry"
+      },
+      {
+        "name": "20th Motor Rifle Division",
+        "country": "GDR",
+        "location": "Bredenfelde",
+        "size": "division",
+        "team": "PACT",
+        "type": "infantry"
+      }
+    ]
+  },
+  {
+    "name": "Northern Group of Polish Forces",
+    "country": "PL",
+    "location": "Legnica",
+    "size": "administrative",
+    "team": "PACT",
+    "type": "administrative",
+    "units": [
+      {
+        "name": "6th Guards Motor Rifle Division",
+        "country": "PL",
+        "location": null,
+        "size": "division",
+        "team": "PACT",
+        "type": "infantry"
+      },
+      {
+        "name": "20th Tank Division",
+        "country": "PL",
+        "location": null,
+        "size": "division",
+        "team": "PACT",
+        "type": "armor"
+      },
+      {
+        "name": "114th Missile Brigade",
+        "country": "PL",
+        "location": null,
+        "size": "brigade",
+        "team": "PACT",
+        "type": "artillery"
+      },
+      {
+        "name": "140th Anti-Aircraft Missile Brigade",
+        "country": "PL",
+        "location": null,
+        "size": "brigade",
+        "team": "PACT",
+        "type": "anti_air"
+      },
+      {
+        "name": "325th Anti-Aircraft Missile Regiment",
+        "country": "PL",
+        "location": null,
+        "size": "regiment",
+        "team": "PACT",
+        "type": "anti_air"
+      },
+      {
+        "name": "83rd Air Assault Brigade",
+        "country": "PL",
+        "location": null,
+        "size": "brigade",
+        "team": "PACT",
+        "type": "infantry"
+      },
+      {
+        "name": "55th Guards Helicopter Regiment",
+        "country": "PL",
+        "location": null,
+        "size": "regiment",
+        "team": "PACT",
+        "type": "helicopter"
+      }
+    ]
+  },
+  {
+    "name": "Western Group of Forces",
+    "country": "USSR",
+    "location": "Brandenburg",
+    "size": "administrative",
+    "team": "PACT",
+    "type": "administrative",
+    "units": [
+      {
+        "name": "2nd Guards Tank Army",
+        "country": "USSR",
+        "location": "Fürstenberg",
+        "size": "administrative",
+        "team": "PACT",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "16th Guards Tank Division",
+            "country": "USSR",
+            "location": "Neustrelitz",
+            "size": "division",
+            "team": "PACT",
+            "type": "armor"
+          },
+          {
+            "name": "21st Motor Rifle Division",
+            "country": "USSR",
+            "location": "Perleberg",
+            "size": "division",
+            "team": "PACT",
+            "type": "infantry"
+          },
+          {
+            "name": "94th Guards Motor Rifle Division",
+            "country": "USSR",
+            "location": "Schwerin",
+            "size": "division",
+            "team": "PACT",
+            "type": "infantry"
+          },
+          {
+            "name": "207th Motor Rifle Division",
+            "country": "USSR",
+            "location": "Stendal",
+            "size": "division",
+            "team": "PACT",
+            "type": "infantry"
+          }
+        ]
+      },
+      {
+        "name": "3rd Red Banner Army",
+        "country": "USSR",
+        "location": "Magdeburg",
+        "size": "administrative",
+        "team": "PACT",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "7th Guards Tank Division",
+            "country": "USSR",
+            "location": "Dessau-Rosslau",
+            "size": "division",
+            "team": "PACT",
+            "type": "armor"
+          },
+          {
+            "name": "10th Guards Uralsko-Lvovskaya Tank Division",
+            "country": "USSR",
+            "location": "Altengrabow",
+            "size": "division",
+            "team": "PACT",
+            "type": "armor"
+          },
+          {
+            "name": "12th Guards Tank Division",
+            "country": "USSR",
+            "location": "Neuruppin",
+            "size": "division",
+            "team": "PACT",
+            "type": "armor"
+          },
+          {
+            "name": "47th Guards Tank Division",
+            "country": "USSR",
+            "location": "Hillersleben",
+            "size": "division",
+            "team": "PACT",
+            "type": "armor"
+          }
+        ]
+      },
+      {
+        "name": "20th Guards Red Banner Army",
+        "country": "USSR",
+        "location": "Eberswalde",
+        "size": "administrative",
+        "team": "PACT",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "25th Tank Division",
+            "country": "USSR",
+            "location": "Vogelsang",
+            "size": "division",
+            "team": "PACT",
+            "type": "armor"
+          },
+          {
+            "name": "32nd Guards Tank Division",
+            "country": "USSR",
+            "location": "Jüterbog",
+            "size": "division",
+            "team": "PACT",
+            "type": "armor"
+          },
+          {
+            "name": "35th Guards Motor Rifle Division",
+            "country": "USSR",
+            "location": "Krampnitz",
+            "size": "division",
+            "team": "PACT",
+            "type": "infantry"
+          },
+          {
+            "name": "90th Guards Tank Division",
+            "country": "USSR",
+            "location": "Bernau bei Berlin",
+            "size": "division",
+            "team": "PACT",
+            "type": "armor"
+          }
+        ]
+      },
+      {
+        "name": "16th Air Army",
+        "country": "USSR",
+        "location": "Zossen",
+        "size": "administrative",
+        "team": "PACT",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "6th Guards Fighter Aviation Division",
+            "country": "USSR",
+            "location": "Merseburg",
+            "size": "division",
+            "team": "PACT",
+            "type": "air"
+          },
+          {
+            "name": "16th Guards Fighter Aviation Division",
+            "country": "USSR",
+            "location": "Ribnitz-Damgarten",
+            "size": "division",
+            "team": "PACT",
+            "type": "air"
+          },
+          {
+            "name": "105th Fighter-Bomber Aviation Division",
+            "country": "USSR",
+            "location": "Großenhain",
+            "size": "division",
+            "team": "PACT",
+            "type": "air"
+          },
+          {
+            "name": "125th Fighter-Bomber Aviation Division",
+            "country": "USSR",
+            "location": "Rechlin",
+            "size": "division",
+            "team": "PACT",
+            "type": "air"
+          },
+          {
+            "name": "126th Fighter Aviation Division",
+            "country": "USSR",
+            "location": "Zerbst",
+            "size": "division",
+            "team": "PACT",
+            "type": "air"
+          }
+        ]
+      },
+      {
+        "name": "6th Separate Guards Motor Rifle Brigade",
+        "country": "USSR",
+        "location": "Karlshorst",
+        "size": "brigade",
+        "team": "PACT",
+        "type": "infantry"
+      },
+      {
+        "name": "35th Guards Air Assault Brigade",
+        "country": "USSR",
+        "location": "Cottbus",
+        "size": "brigade",
+        "team": "PACT",
+        "type": "airborne"
+      },
+      {
+        "name": "34th Guards Artillery Division",
+        "country": "USSR",
+        "location": "Potsdam",
+        "size": "division",
+        "team": "PACT",
+        "type": "artillery"
+      }
+    ]
+  }
+]

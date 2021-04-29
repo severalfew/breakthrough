@@ -1,0 +1,496 @@
+[
+  {
+    "name": "Allied Land Forces LANDJUT",
+    "country": "DE",
+    "location": "Rendsburg",
+    "size": "administrative",
+    "team": "NATO",
+    "type": "administrative",
+    "units": [
+      {
+        "name": "33rd Artillery Battalion",
+        "country": "DE",
+        "location": "Skive",
+        "size": "battalion",
+        "team": "NATO",
+        "type": "artillery"
+      },
+      {
+        "name": "650th Rocket Artillery Battalion",
+        "country": "DE",
+        "location": "Flensburg",
+        "size": "battalion",
+        "team": "NATO",
+        "type": "artillery"
+      },
+      {
+        "name": "600th Air Defence Regiment",
+        "country": "DE",
+        "location": "Rendsburg",
+        "size": "regiment",
+        "team": "NATO",
+        "type": "anti_air"
+      },
+      {
+        "name": "Jutland Battle Group",
+        "country": "DK",
+        "location": "Holstebro",
+        "size": "division",
+        "team": "NATO",
+        "type": "infantry",
+        "units": [
+          {
+            "name": "4th Btn, Jydske Dragonregiment",
+            "country": "DK",
+            "location": "Holstebro",
+            "size": "battalion",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "3rd Btn, Kongens Jyske Fodregiment",
+            "country": "DK",
+            "location": "Holstebro",
+            "size": "battalion",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "4th Btn, Prinsens Livregiment",
+            "country": "DK",
+            "location": "Holstebro",
+            "size": "battalion",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "8th Artillery Btn, Nørrejyske Artilleriregiment",
+            "country": "DK",
+            "location": "Holstebro",
+            "size": "battalion",
+            "team": "NATO",
+            "type": "artillery"
+          }
+        ]
+      },
+      {
+        "name": "1st Infantry Brigade",
+        "country": "UK",
+        "location": "nato_reserve",
+        "size": "brigade",
+        "team": "NATO",
+        "type": "infantry"
+      },
+      {
+        "name": "Jutland Division",
+        "country": "DK",
+        "location": "Fredericia",
+        "size": "division",
+        "team": "NATO",
+        "type": "infantry",
+        "units": [
+          {
+            "name": "4th Battalion, Fynske Livregiment",
+            "country": "DK",
+            "location": "Fredericia",
+            "size": "battalion",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "6th Battalion, Jydske Dragonregiment",
+            "country": "DK",
+            "location": "Fredericia",
+            "size": "battalion",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "5th Battalion, Jydske Dragonregiment",
+            "country": "DK",
+            "location": "Fredericia",
+            "size": "battalion",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "1st Jutland Brigade",
+            "country": "DK",
+            "location": "Fredericia",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "2nd Jutland Brigade",
+            "country": "DK",
+            "location": "Skive",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "3rd Jutland Brigade",
+            "country": "DK",
+            "location": "Haderslev",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "Divisional Artillery Regiment",
+            "country": "DK",
+            "location": "Skive",
+            "size": "regiment",
+            "team": "NATO",
+            "type": "artillery"
+          },
+          {
+            "name": "14th Air Defence Battalion",
+            "country": "DK",
+            "location": "Ålborg",
+            "size": "battalion",
+            "team": "NATO",
+            "type": "artillery"
+          }
+        ]
+      },
+      {
+        "name": "6th Panzergrenadier Division",
+        "country": "DE",
+        "location": "Neumünster",
+        "size": "division",
+        "team": "NATO",
+        "type": "infantry",
+        "units": [
+          {
+            "name": "16th Panzergrenadier Brigade",
+            "country": "DE",
+            "location": "Wentorf",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "17th Panzergrenadier Brigade",
+            "country": "DE",
+            "location": "Hamburg",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "18th Panzer Brigade",
+            "country": "DE",
+            "location": "Neumünster",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "51st Home Defence Brigade",
+            "country": "DE",
+            "location": "Eutin",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "6th Artillery Regiment",
+            "country": "DE",
+            "location": "Eutin",
+            "size": "regiment",
+            "team": "NATO",
+            "type": "artillery"
+          },
+          {
+            "name": "6th Army Aviation Regiment",
+            "country": "DE",
+            "location": "Hohenlockstedt",
+            "size": "regiment",
+            "team": "NATO",
+            "type": "air"
+          },
+          {
+            "name": "6th Air Defence Regiment",
+            "country": "DE",
+            "location": "Lütjenburg",
+            "size": "regiment",
+            "team": "NATO",
+            "type": "anti_air"
+          }
+        ]
+      },
+      {
+        "name": "Territorial Command Schleswig-Holstein",
+        "country": "DE",
+        "location": "Kiel",
+        "size": "administrative",
+        "team": "NATO",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "61st Home Defence Brigade",
+            "country": "DE",
+            "location": "Idstedt",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "71st Home Defence Regiment",
+            "country": "DE",
+            "location": "Idstedt",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "regiment"
+          },
+          {
+            "name": "81st Home Defence Regiment",
+            "country": "DE",
+            "location": "Idstedt",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "regiment"
+          },
+          {
+            "name": "81st Home Defence Regiment",
+            "country": "DE",
+            "location": "Idstedt",
+            "size": "brigade",
+            "team": "NATO",
+            "type": "regiment"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Allied Land Forces NORTHAG",
+    "country": "DE",
+    "location": null,
+    "size": "administrative",
+    "team": "NATO",
+    "type": "administrative",
+    "units": [
+      {
+        "name": "I Netherlands Corps",
+        "country": "NL",
+        "location": null,
+        "size": "administrative",
+        "team": "NATO",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "1e Divisie",
+            "country": "NL",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "3rd Panzer Division",
+            "country": "NL",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "4e Divisie",
+            "country": "NL",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "5e Divisie",
+            "country": "NL",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "101e Infanteriebrigade",
+            "country": "NL",
+            "location": null,
+            "size": "brigade",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "I (NL) Corps Artillery",
+            "country": "NL",
+            "location": null,
+            "size": "brigade",
+            "team": "NATO",
+            "type": "artillery"
+          }
+        ]
+      },
+      {
+        "name": "I German Corps",
+        "country": "DE",
+        "location": null,
+        "size": "administrative",
+        "team": "NATO",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "1st Panzer Division",
+            "country": "DE",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "7th Panzer Division",
+            "country": "DE",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "11th Panzergrenadier Division",
+            "country": "DE",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "27th Airborne Brigade",
+            "country": "DE",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "airborne"
+          }
+        ]
+      },
+      {
+        "name": "1 British Corps",
+        "country": "UK",
+        "location": null,
+        "size": "administrative",
+        "team": "NATO",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "1st Armoured Division",
+            "country": "UK",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "2nd Infantry Division",
+            "country": "UK",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "3rd Armoured Division",
+            "country": "UK",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "4th Armoured Division",
+            "country": "UK",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "armor"
+          }
+        ]
+      },
+      {
+        "name": "I Belgian Corps",
+        "country": "BE",
+        "location": null,
+        "size": "administrative",
+        "team": "NATO",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "1er Division d'Infanterie",
+            "country": "BE",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "16de Pantserdivisie",
+            "country": "BE",
+            "location": null,
+            "size": "division",
+            "team": "NATO",
+            "type": "armor"
+          }
+        ]
+      },
+      {
+        "name": "III US Corps",
+        "country": "US",
+        "location": null,
+        "size": "administrative",
+        "team": "NATO",
+        "type": "administrative",
+        "units": [
+          {
+            "name": "1st Cavalry Division",
+            "country": "US",
+            "location": null,
+            "size": "divison",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "2nd Armored Division",
+            "country": "US",
+            "location": null,
+            "size": "divison",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "5th Infantry Division (Mechanized)",
+            "country": "US",
+            "location": null,
+            "size": "divison",
+            "team": "NATO",
+            "type": "infantry"
+          },
+          {
+            "name": "3rd Armored Cavalry",
+            "country": "US",
+            "location": null,
+            "size": "divison",
+            "team": "NATO",
+            "type": "armor"
+          },
+          {
+            "name": "III Corps Artillery",
+            "country": "US",
+            "location": null,
+            "size": "brigade",
+            "team": "NATO",
+            "type": "artillery"
+          }
+        ]
+      }
+    ]
+  }
+]
