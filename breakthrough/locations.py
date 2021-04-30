@@ -10,7 +10,7 @@ class CITY_SIZES(Enum):
     town = 2
     city = 3
     base = 4
-    metropolis = 5
+    metro = 5
 
 
 class Location:

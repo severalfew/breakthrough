@@ -1,57 +1,57 @@
-team,size,type,name
-NATO,battalion,artillery,
-NATO,battalion,artillery,
-NATO,regiment,anti_air,
-NATO,division,infantry,
-NATO,brigade,infantry,
-NATO,division,infantry,
-NATO,division,infantry,
-NATO,division,infantry,
-NATO,division,infantry,
-NATO,division,armor,
-NATO,division,infantry,
-NATO,division,infantry,
-NATO,brigade,infantry,
-NATO,brigade,artillery,
-NATO,division,armor,
-NATO,division,armor,
-NATO,division,infantry,
-NATO,brigade,airborne,
-NATO,division,armor,
-NATO,division,infantry,
-NATO,division,armor,
-NATO,division,armor,
-NATO,division,infantry,
-NATO,division,armor,
-NATO,division,infantry,
-NATO,division,armor,
-NATO,division,infantry,
-NATO,division,armor,
-NATO,brigade,artillery,
-PACT,division,infantry,
-PACT,division,infantry,
-PACT,division,infantry,
-PACT,division,infantry,
-PACT,division,armor,
-PACT,division,infantry,
-PACT,division,armor,
-PACT,brigade,artillery,
-PACT,brigade,artillery,
-PACT,regiment,artillery,
-PACT,brigade,airborne,
-PACT,regiment,helicopter,
-PACT,division,infantry,
-PACT,division,armor,
-PACT,division,infantry,
-PACT,division,infantry,
-PACT,division,infantry,
-PACT,division,armor,
-PACT,division,armor,
-PACT,division,armor,
-PACT,division,infantry,
-PACT,division,armor,
-PACT,division,armor,
-PACT,division,armor,
-PACT,brigade,infantry,6th Separate Guards Motor Rifle Brigade
-PACT,brigade,airborne,35th Guards Air Assault Brigade
-PACT,division,artillery,34th Guards Artillery Division
+team,size,type,name,effective
+NATO,battalion,artillery,33rd Artillery Battalion,brigade
+NATO,battalion,artillery,650th Rocket Artillery Battalion,brigade
+NATO,regiment,anti_air,600th Air Defence Regiment,brigade
+NATO,division,infantry,Jutland Battle Group,division
+NATO,brigade,infantry,1st Infantry Brigade,brigade
+NATO,division,infantry,Jutland Division,division
+NATO,division,infantry,6th Panzergrenadier Division,division
+NATO,division,infantry,Territorial Command Schleswig-Holstein,division
+NATO,division,infantry,1e Divisie,division
+NATO,division,armor,3rd Panzer Division,division
+NATO,division,infantry,4e Divisie,division
+NATO,division,infantry,5e Divisie,division
+NATO,brigade,infantry,101e Infanteriebrigade,brigade
+NATO,brigade,artillery,I Corps Artillery,brigade
+NATO,division,armor,1st Panzer Division,division
+NATO,division,armor,7th Panzer Division,division
+NATO,division,infantry,11th Panzergrenadier Division,division
+NATO,brigade,airborne,27th Airborne Brigade,brigade
+NATO,division,armor,1st Armoured Division,division
+NATO,division,infantry,2nd Infantry Division,division
+NATO,division,armor,3rd Armoured Division,division
+NATO,division,armor,4th Armoured Division,division
+NATO,division,infantry,1er Division d'Infanterie,division
+NATO,division,armor,16de Pantserdivisie,division
+NATO,division,infantry,1st Cavalry Division,division
+NATO,division,armor,2nd Armored Division,division
+NATO,division,infantry,5th Infantry Division,division
+NATO,division,armor,3rd Armored Cavalry,division
+NATO,brigade,artillery,III Corps Artillery,brigade
+PACT,division,infantry,1st Motor Rifle Division,division
+PACT,division,infantry,8th Motor Rifle Division,division
+PACT,division,infantry,19th Motor Rifle Division,division
+PACT,division,infantry,20th Motor Rifle Division,division
+PACT,division,armor,9th Panzer Division,division
+PACT,division,infantry,6th Guards Motor Rifle Division,division
+PACT,division,armor,20th Tank Division,division
+PACT,brigade,artillery,114th Missile Brigade,brigade
+PACT,brigade,artillery,140th Anti-Aircraft Missile Brigade,brigade
+PACT,regiment,artillery,325th Anti-Aircraft Missile Regiment,brigade
+PACT,brigade,airborne,83rd Air Assault Brigade,brigade
+PACT,regiment,helicopter,55th Guards Helicopter Regiment,brigade
+PACT,division,armor,16th Guards Tank Division,division
+PACT,division,infantry,21st Motor Rifle Division,division
+PACT,division,infantry,94th Guards Motor Rifle Division,division
+PACT,division,infantry,207th Motor Rifle Division,division
+PACT,division,armor,7th Guards Tank Division,division
+PACT,division,armor,10th Guards Uralsko-Lvovskaya Tank Division,division
+PACT,division,armor,47th Guards Tank Division,division
+PACT,division,armor,12th Guards Tank Division,division
+PACT,division,armor,25th Tank Division,division
+PACT,division,armor,32nd Guards Tank Division,division
+PACT,division,infantry,35th Guards Motor Rifle Division,division
+PACT,division,armor,90th Guards Tank Division,division
+PACT,brigade,infantry,6th Separate Guards Motor Rifle Brigade,brigade
+PACT,brigade,airborne,35th Guards Air Assault Brigade,brigade
+PACT,division,artillery,34th Guards Artillery Division,division
