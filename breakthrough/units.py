@@ -1,9 +1,9 @@
 from .constants import COUNTRIES, TEAMS
 from enum import IntEnum
-from jsonschema import validate
 
 
 class UNIT_SIZES(IntEnum):
+    corps = 4
     division = 3
     brigade = 2
     regiment = 1
@@ -27,15 +27,17 @@ unit_schema = {
 
 
 class Unit:
-    def __init__(self, name, size, team, country, children=[]):
+    def __init__(self, name, size, team, country, children=[], color="grey"):
         self.name = name
         assert size in UNIT_SIZES, f"Unit size must be in: {UNIT_SIZES}"
         self.size = size
         assert team in TEAMS, f"Team must be in: {TEAMS}"
         self.team = team
-        assert country in COUNTRIES, f"Country must be in: {COUNTRIES}"
+        assert country in COUNTRIES.values(), f"Country must be in: {COUNTRIES.keys()}"
+        self.country = country
         assert len(children) <= self.size
         self.children = children
+        self.color=color
 
     def __str__(self):
         return f"{self.name} - {self.size} - {self.team} - [{self.size + 1}]"
