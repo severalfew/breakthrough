@@ -1,9 +1,11 @@
 team,country,city_size,name
+NATO,DE,city,Ahrensburg
 NATO,DE,city,Bielefeld
 NATO,DE,town,Bocholt
 NATO,DE,town,Braunschweig
 NATO,DE,metro,Bremen
 NATO,DE,city,Bremerhaven
+NATO,DE,town,Buchholz in der Nordheide
 NATO,DE,town,Celle
 NATO,DE,town,Cuxhaven
 NATO,DE,city,Dortmund
@@ -13,7 +15,6 @@ NATO,DE,town,Fehmarn
 NATO,DE,base,Flensburg
 NATO,DE,town,Göttingen
 NATO,DE,metro,Hamburg
-NATO,DE,metro,Hannover
 NATO,DE,metro,Hannover
 NATO,DE,town,Heide
 NATO,DE,town,Husum
@@ -27,14 +28,16 @@ NATO,DE,town,Lübeck
 NATO,DE,base,Lüneberg
 NATO,DE,town,Magdeburg
 NATO,DE,town,Meppen
+NATO,DE,town,Molln
 NATO,DE,town,Münster
 NATO,DE,town,Neumünster
 NATO,DE,base,Nordholz
-NATO,DE,town,Oldenburg
+NATO,DE,town,Oldenburg in Holstein
 NATO,DE,base,Osnabrück
 NATO,DE,town,Paderborn
 NATO,DE,base,Rendsburg
 NATO,DE,city,Schleswig
+NATO,DE,town,Stade
 NATO,DE,town,Tønder
 NATO,DE,town,Uelzen
 NATO,DE,town,Walsrode
