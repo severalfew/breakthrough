@@ -1,5 +1,5 @@
 from .constants import COLORS, COUNTRIES, TEAMS
-from .units import Unit, UNIT_SIZES
+from .units import Unit, UNIT_SIZES, UNIT_TYPES
 from .utility import resource_path
 from matplotlib import pyplot as plt
 from tqdm import tqdm
@@ -12,7 +12,10 @@ corps = [
         size=UNIT_SIZES.corps,
         team=TEAMS.NATO,
         country=COUNTRIES["DK"],
-        children=["Infantry Division", "Armored Division"],
+        children=[
+            Unit("Jutland Division", size=UNIT_SIZES.division, type=UNIT_TYPES.infantry),
+            "Armored Division (Armor)"
+        ],
         color="royalblue"
     ),
     Unit(

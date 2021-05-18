@@ -13,6 +13,18 @@ class UNIT_SIZES(IntEnum):
     administrative = 4
 
 
+class UNIT_TYPES(IntEnum):
+    administrative = 0
+    artillery = 1
+    infantry = 2
+    armor = 3
+    support = 4
+    airborne = 5
+    air_defense = 6
+    fighter = 7
+    bomber = 8
+
+
 unit_schema = {
     "type": "object",
     "properties": {
@@ -27,7 +39,7 @@ unit_schema = {
 
 
 class Unit:
-    def __init__(self, name, size, team, country, children=[], color="grey"):
+    def __init__(self, name, size, team, country, children=[], color="grey", type=UNIT_TYPES.administrative):
         self.name = name
         assert size in UNIT_SIZES, f"Unit size must be in: {UNIT_SIZES}"
         self.size = size
@@ -37,7 +49,8 @@ class Unit:
         self.country = country
         assert len(children) <= self.size
         self.children = children
-        self.color=color
+        self.color = color
+        self.type = type
 
     def __str__(self):
         return f"{self.name} - {self.size} - {self.team} - [{self.size + 1}]"
