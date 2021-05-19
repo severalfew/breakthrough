@@ -3,14 +3,14 @@ from enum import IntEnum
 
 
 class UNIT_SIZES(IntEnum):
-    corps = 4
-    division = 3
-    brigade = 2
-    regiment = 1
-    battallion = 0
-    battery = 0
-    company = 0
-    administrative = 4
+    corps = 50
+    division = 4
+    brigade = 3
+    regiment = 2
+    battallion = 1
+    battery = 1
+    company = 1
+    administrative = 100
 
 
 class UNIT_TYPES(IntEnum):
@@ -47,10 +47,10 @@ class Unit:
         self.team = team
         assert country in COUNTRIES.values(), f"Country must be in: {COUNTRIES.keys()}"
         self.country = country
-        assert len(children) <= self.size
+        assert len(children) <= self.size.value, f"{len(children)} {self.size.value}"
         self.children = children
         self.color = color
         self.type = type
 
     def __str__(self):
-        return f"{self.name} - {self.size} - {self.team} - [{self.size + 1}]"
+        return self.name

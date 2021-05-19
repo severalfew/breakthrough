@@ -22,7 +22,7 @@ COUNTRIES = {
     "UK": country("UK", "United Kingdom"),
     "NL": country("NL", "Nederland"),
     "PL": country("PL", "Poland"),
-    "DE": country("DE", "Deutschlan"),
+    "DE": country("DE", "Deutschland"),
     "DDR": country("DDR", "Ost Deutchland"),
     "BE": country("BE", "Belgium"),
     "CZ": country("CZ", "Czechoslovakia"),

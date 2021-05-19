@@ -6,6 +6,26 @@ from tqdm import tqdm
 import matplotlib.patches as patches
 import os
 
+division = UNIT_SIZES.division
+battallion = UNIT_SIZES.battallion
+brigade = UNIT_SIZES.brigade
+regiment = UNIT_SIZES.regiment
+corps = UNIT_SIZES.corps
+
+infantry = UNIT_TYPES.infantry
+artillery = UNIT_TYPES.artillery
+armor = UNIT_TYPES.armor
+air_defense = UNIT_TYPES.air_defense
+airborne = UNIT_TYPES.airborne
+
+nato = TEAMS.NATO
+pact = TEAMS.PACT
+
+de = COUNTRIES['DE']
+dk = COUNTRIES['DK']
+nl = COUNTRIES['NL']
+uk = COUNTRIES['UK']
+
 corps = [
     Unit(
         name="Landjut Command",
@@ -13,84 +33,110 @@ corps = [
         team=TEAMS.NATO,
         country=COUNTRIES["DK"],
         children=[
-            Unit("Jutland Division", size=UNIT_SIZES.division, type=UNIT_TYPES.infantry),
-            "Armored Division (Armor)"
+            Unit("Jutland Division", division, nato, dk, type=infantry),
+            Unit("33rd Artillery Battalion", battallion, nato, dk, type=artillery),
+            Unit("650th Rocket Artillery Battalion", battallion, nato, dk, type=artillery),
+            Unit("600th Air Defence Regiment", regiment, nato, dk, type=air_defense),
+            Unit("Jutland Battle Group", brigade, nato, dk, type=armor),
+            Unit("1st Infantry Brigade", brigade, nato, dk, type=infantry),
+            Unit("6th Panzergrenadier Division", division, nato, dk, type=infantry),
+            Unit("Territorial Command Schleswig-Holstein", brigade, nato, dk, type=infantry)
         ],
         color="royalblue"
     ),
     Unit(
         name="I Netherlands Corps",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.NATO,
         country=COUNTRIES["NL"],
-        color="mediumblue"
+        color="mediumblue",
+        children=[
+            Unit("1e Divisie", division, nato, nl, type=infantry),
+            Unit("3rd Panzer Division", division, nato, nl, type=armor),
+            Unit("4e Divisie", division, nato, nl, type=infantry),
+            Unit("5e Divisie", division, nato, nl, type=infantry),
+            Unit("101e Infanteriebrigade", brigade, nato, nl, type=infantry),
+            Unit("1 Corps Artillery", brigade, nato, nl, type=artillery),
+        ]
     ),
     Unit(
         name="I German Corps",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.NATO,
         country=COUNTRIES["DE"],
-        color="lightsteelblue"
+        color="lightsteelblue",
+        children=[
+            Unit("1st Panzer Division", division, nato, de, type=armor),
+            Unit("7th Panzer Division", division, nato, de, type=armor),
+            Unit("11th Panzergrenadier Division", division, nato, de, type=infantry),
+            Unit("27th Airborne Brigade", brigade, nato, de, type=airborne)
+        ]
     ),
     Unit(
         name="I British Corps",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.NATO,
         country=COUNTRIES["UK"],
-        color="cornflowerblue"
+        color="cornflowerblue",
+        children=[
+            Unit("1st Armoured Division", division, nato, uk, type=armor),
+            Unit("2nd Infantry Division", division, nato, uk, type=infantry),
+            Unit("3rd Armoured Division", division, nato, uk, type=armor),
+            Unit("4th Armoured Division", division, nato, uk, type=armor),
+        ]
     ),
     Unit(
         name="I Belgian Corps",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.NATO,
         country=COUNTRIES["DK"],
         color="darkblue"
     ),
     Unit(
         name="III US Corps",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.NATO,
         country=COUNTRIES["US"],
         color="dodgerblue"
     ),
     Unit(
         name="2nd Guards Tank Army",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["USSR"],
         color="red"
     ),
     Unit(
         name="3rd Red Banner Army",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["USSR"],
         color="brown"
     ),
     Unit(
         name="Nationale Volksarmee",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["DDR"],
         color="indianred"
     ),
     Unit(
         name="Northern Group of Forces",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["PL"],
         color="tomato"
     ),
     Unit(
         name="11th Guards Army Baltic Command",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["USSR"],
         color="firebrick"
     ),
     Unit(
         name="1st Czechoslovak People's Army",
-        size=UNIT_SIZES.corps,
+        size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["CZ"],
         color="salmon"
@@ -143,34 +189,30 @@ for unit in gen:
 
     for i, child in enumerate(unit.children):
         rgb = [x / 255 for x in getattr(COLORS, unit.team.name).value]
-        size = 0
-        for s in UNIT_SIZES:
-            if s.name in child.lower():
-                size = s.value
-                break
+        size = child.size.value
         ax.text(
             .45,
-            2.1 - .3 * i,
+            2.1 - .28 * i,
             f"[{size}] {child}",
             ha='left',
             va='center',
-            fontsize="small"
+            fontsize="x-small"
         )
         ax.add_patch(patches.Rectangle(
-            (.1, 2.025 - .3 * i),
+            (.1, 2.025 - .28 * i),
             .3,
             .2,
             edgecolor="w",
             facecolor=unit.color,
         ))
-        if "Infantry" in child:
-            plt.plot([.1, .4], [2.025 - .3 * i, 2.225 - .3 * i], color="w")
-            plt.plot([.1, .4], [2.225 - .3 * i, 2.025 - .3 * i], color="w")
-        elif "Armor" in child:
-            plt.plot([.2, .3], [2.075 - .3 * i, 2.075 - .3 * i], color="w")
-            plt.plot([.2, .3], [2.175 - .3 * i, 2.175 - .3 * i], color="w")
+        if child.type == infantry:
+            plt.plot([.1, .4], [2.025 - .28 * i, 2.225 - .28 * i], color="w")
+            plt.plot([.1, .4], [2.225 - .28 * i, 2.025 - .28 * i], color="w")
+        elif child.type == armor:
+            plt.plot([.2, .3], [2.075 - .28 * i, 2.075 - .28 * i], color="w")
+            plt.plot([.2, .3], [2.175 - .28 * i, 2.175 - .28 * i], color="w")
             ax.add_patch(patches.Arc(
-                (.2, 2.125 - .3 * i),
+                (.2, 2.125 - .28 * i),
                 .1,
                 .1,
                 theta1=90,
@@ -178,7 +220,7 @@ for unit in gen:
                 color="w"
             ))
             ax.add_patch(patches.Arc(
-                (.3, 2.125 - .3 * i),
+                (.3, 2.125 - .28 * i),
                 .1,
                 .1,
                 theta1=270,
