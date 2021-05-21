@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 import os
+import sys
 
 
 def dist(n1, n2):
@@ -17,33 +18,33 @@ def dist(n1, n2):
 
 G = nx.DiGraph()
 
-location_path = os.path.join(resource_path, "location.json")
+location_path = os.path.join(resource_path, "locations")
 
 nodes = []
-with open(location_path, "r") as fp:
-    data = json.load(fp)
-    for node in data:
-        G.add_node(node["city"], **node)
-        nodes.append(node["city"])
+for file in os.listdir(location_path):
+    with open(os.path.join(location_path, file), "r") as fp:
+        data = json.load(fp)
+        G.add_node(data["city"], **data)
+        nodes.append(data["city"])
 
 pos = nx.get_node_attributes(G, "x")
 for key, value in pos.items():
     pos[key] = (value, G.nodes[key]["y"])
 
-# tri = Delaunay(np.array(list(pos.values())))
-# for simplex in tri.simplices:
-#     for n1, n2 in itertools.permutations(simplex, r=2):
-#         if "neighbors" not in data[n1].keys():
-#             data[n1]["neighbors"] = []
-#         if n2 not in data[n1]["neighbors"]:
-#             data[n1]["neighbors"].append(int(n2))
-#
-# with open(location_path, "w") as fp:
-#     json.dump(data, fp)
+tri = Delaunay(np.array(list(pos.values())))
+for simplex in tri.simplices:
+    for n1, n2 in itertools.permutations(simplex, r=2):
+        if "neighbors" not in G.nodes[nodes[n1]]:
+            G.nodes[nodes[n1]]['neighbors'] = []
+        if n2 not in G.nodes[nodes[n1]]["neighbors"]:
+            G.nodes[nodes[n1]]["neighbors"].append(nodes[n2])
 
-for i, node in enumerate(data):
-    for neighbor in node['neighbors']:
-        G.add_edge(node['city'], nodes[neighbor])
+with open(os.path.join(resource_path, "location.json"), "w") as fp:
+    json.dump(data, fp)
+
+for i, node in enumerate(nodes):
+    for neighbor in G.nodes[node]["neighbors"]:
+        G.add_edge(node, neighbor)
 
 
 def draw_location(ax, node):
@@ -63,13 +64,13 @@ def draw_location(ax, node):
     ),
     plt.imshow(
         COUNTRIES[node['country']].icon,
-        extent=[node["x"]-.25, node["x"]-.1, node["y"]-.075, node["y"]+.075]
+        extent=[node["x"] - .25, node["x"] - .1, node["y"] - .075, node["y"] + .075]
     )
 
 
 plt.figure(figsize=(20, 20))
-for node in data:
-    draw_location(ax=plt.gca(), node=node)
+for node in G.nodes:
+    draw_location(ax=plt.gca(), node=G.nodes[node])
 nx.draw_networkx_edges(
     G,
     pos=pos,

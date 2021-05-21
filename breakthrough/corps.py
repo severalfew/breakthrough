@@ -22,6 +22,7 @@ nato = TEAMS.NATO
 pact = TEAMS.PACT
 
 be = COUNTRIES['BE']
+cz = COUNTRIES['CZ']
 ddr = COUNTRIES['DDR']
 de = COUNTRIES['DE']
 dk = COUNTRIES['DK']
@@ -90,7 +91,7 @@ corps = [
         name="I Belgian Corps",
         size=corps,
         team=TEAMS.NATO,
-        country=COUNTRIES["DK"],
+        country=COUNTRIES["BE"],
         color="darkblue",
         children=[
             Unit("1er Division d'Infanterie", division, nato, be, type=infantry),
@@ -159,8 +160,9 @@ corps = [
         color="tomato",
         children=[
             Unit("6th Guards Motor Rifle Division", division, pact, pl, type=infantry),
-            Unit("6th Guards Motor Rifle Division", division, pact, pl, type=infantry),
-            Unit("6th Guards Motor Rifle Division", division, pact, pl, type=infantry),
+            Unit("20th Tank Division", division, pact, pl, type=armor),
+            Unit("83rd Air Assault Brigade", brigade, pact, pl, type=infantry),
+            Unit("6th Guards Motor Rifle Brigade", brigade, pact, pl, type=infantry),
         ]
     ),
     Unit(
@@ -168,14 +170,26 @@ corps = [
         size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["USSR"],
-        color="firebrick"
+        color="firebrick",
+        children=[
+            Unit("20th Tank Division", division, pact, ussr, type=armor),
+            Unit("32nd Guards Tank Division", division, pact, ussr, type=armor),
+            Unit("35th Guards Motor Rifle Division", division, pact, ussr, type=infantry),
+            Unit("90th Guards Tank Division", division, pact, ussr, type=armor),
+        ]
     ),
     Unit(
         name="1st Czechoslovak People's Army",
         size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["CZ"],
-        color="salmon"
+        color="salmon",
+        children=[
+            Unit("1st Tank Division", division, pact, cz, type=armor),
+            Unit("2nd Motor Rifle Division", division, pact, cz, type=infantry),
+            Unit("19th Motor Rifle Division", division, pact, cz, type=infantry),
+            Unit("20th Motor Rifle Division", division, pact, cz, type=infantry),
+        ]
     ),
 ]
 
@@ -184,17 +198,11 @@ os.makedirs(image_path, exist_ok=True)
 gen = tqdm(corps)
 for unit in gen:
     gen.set_description(unit.name)
-    plt.figure(figsize=(2.5, 3.5))
+    plt.figure(figsize=(3.5, 2.5))
     ax = plt.gca()
-    ax.add_patch(patches.Rectangle(
-        (0, 2.3),
-        2.5,
-        .4,
-        facecolor=unit.color,
-    ))
     ax.text(
         0.9,
-        3.35,
+        2.35,
         unit.name,
         ha='left',
         va='center',
@@ -202,25 +210,16 @@ for unit in gen:
     )
     ax.text(
         0.9,
-        3.1,
+        2.1,
         str(unit.country.name),
         ha='left',
         va='center',
         fontsize="small"
     )
-    plt.axhline(2.7, color='k')
-    ax.text(
-        .1,
-        2.5,
-        "Composition",
-        ha='left',
-        va='center',
-        fontsize="small"
-    )
-    plt.axhline(2.3, color='k', alpha=.5)
+    plt.axhline(1.7, color='k')
     plt.imshow(
         COUNTRIES[unit.country.code].icon,
-        extent=[0, .8, 2.7, 3.5]
+        extent=[0, .8, 1.7, 2.5]
     )
 
     for i, child in enumerate(unit.children):
@@ -228,27 +227,27 @@ for unit in gen:
         size = child.size.value
         ax.text(
             .45,
-            2.1 - .28 * i,
+            1.1 - .28 * i,
             f"[{size}] {child}",
             ha='left',
             va='center',
             fontsize="x-small"
         )
         ax.add_patch(patches.Rectangle(
-            (.1, 2.025 - .28 * i),
+            (.1, 1.025 - .28 * i),
             .3,
             .2,
             edgecolor="w",
             facecolor=unit.color,
         ))
         if child.type == infantry:
-            plt.plot([.1, .4], [2.025 - .28 * i, 2.225 - .28 * i], color="w")
-            plt.plot([.1, .4], [2.225 - .28 * i, 2.025 - .28 * i], color="w")
+            plt.plot([.1, .4], [1.025 - .28 * i, 1.225 - .28 * i], color="w")
+            plt.plot([.1, .4], [1.225 - .28 * i, 1.025 - .28 * i], color="w")
         elif child.type == armor:
-            plt.plot([.2, .3], [2.075 - .28 * i, 2.075 - .28 * i], color="w")
-            plt.plot([.2, .3], [2.175 - .28 * i, 2.175 - .28 * i], color="w")
+            plt.plot([.2, .3], [1.075 - .28 * i, 1.075 - .28 * i], color="w")
+            plt.plot([.2, .3], [1.175 - .28 * i, 1.175 - .28 * i], color="w")
             ax.add_patch(patches.Arc(
-                (.2, 2.125 - .28 * i),
+                (.2, 1.125 - .28 * i),
                 .1,
                 .1,
                 theta1=90,
@@ -256,7 +255,7 @@ for unit in gen:
                 color="w"
             ))
             ax.add_patch(patches.Arc(
-                (.3, 2.125 - .28 * i),
+                (.3, 1.125 - .28 * i),
                 .1,
                 .1,
                 theta1=270,
@@ -265,8 +264,8 @@ for unit in gen:
             ))
 
     # ax.set_axis_off()
-    plt.xlim(0, 2.5)
-    plt.ylim(0, 3.5)
+    plt.xlim(0, 3.5)
+    plt.ylim(0, 2.5)
     ax.set_xticks([])
     ax.set_yticks([])
     plt.savefig(f"{os.path.join(image_path, unit.name)}.png")

@@ -21,6 +21,8 @@ COUNTRIES = {
     "US": country("US", "United States"),
     "UK": country("UK", "United Kingdom"),
     "NL": country("NL", "Nederland"),
+    "FR": country("FR", "France"),
+    "LU": country("LU", "Luxembourg"),
     "PL": country("PL", "Poland"),
     "DE": country("DE", "Deutschland"),
     "DDR": country("DDR", "Ost Deutchland"),
