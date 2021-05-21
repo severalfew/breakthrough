@@ -21,10 +21,15 @@ airborne = UNIT_TYPES.airborne
 nato = TEAMS.NATO
 pact = TEAMS.PACT
 
+be = COUNTRIES['BE']
+ddr = COUNTRIES['DDR']
 de = COUNTRIES['DE']
 dk = COUNTRIES['DK']
 nl = COUNTRIES['NL']
+pl = COUNTRIES['PL']
 uk = COUNTRIES['UK']
+us = COUNTRIES['US']
+ussr = COUNTRIES['USSR']
 
 corps = [
     Unit(
@@ -34,9 +39,6 @@ corps = [
         country=COUNTRIES["DK"],
         children=[
             Unit("Jutland Division", division, nato, dk, type=infantry),
-            Unit("33rd Artillery Battalion", battallion, nato, dk, type=artillery),
-            Unit("650th Rocket Artillery Battalion", battallion, nato, dk, type=artillery),
-            Unit("600th Air Defence Regiment", regiment, nato, dk, type=air_defense),
             Unit("Jutland Battle Group", brigade, nato, dk, type=armor),
             Unit("1st Infantry Brigade", brigade, nato, dk, type=infantry),
             Unit("6th Panzergrenadier Division", division, nato, dk, type=infantry),
@@ -56,7 +58,6 @@ corps = [
             Unit("4e Divisie", division, nato, nl, type=infantry),
             Unit("5e Divisie", division, nato, nl, type=infantry),
             Unit("101e Infanteriebrigade", brigade, nato, nl, type=infantry),
-            Unit("1 Corps Artillery", brigade, nato, nl, type=artillery),
         ]
     ),
     Unit(
@@ -90,42 +91,77 @@ corps = [
         size=corps,
         team=TEAMS.NATO,
         country=COUNTRIES["DK"],
-        color="darkblue"
+        color="darkblue",
+        children=[
+            Unit("1er Division d'Infanterie", division, nato, be, type=infantry),
+            Unit("16de Pantserdivisie", division, nato, be, type=armor)
+        ]
     ),
     Unit(
         name="III US Corps",
         size=corps,
         team=TEAMS.NATO,
         country=COUNTRIES["US"],
-        color="dodgerblue"
+        color="dodgerblue",
+        children=[
+            Unit("1st Cavalry Division", division, nato, us, type=infantry),
+            Unit("2nd Armored Divsion", division, nato, us, type=armor),
+            Unit("3rd Armored Cavalry", division, nato, us, type=armor),
+            Unit("5th Infantry Division", division, nato, us, type=infantry),
+            Unit("III Corps Artillery", battallion, nato, us, type=infantry)
+        ]
     ),
     Unit(
         name="2nd Guards Tank Army",
         size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["USSR"],
-        color="red"
+        color="red",
+        children=[
+            Unit("16th Guards Tank Division", division, pact, ussr, type=armor),
+            Unit("21st Motor Rifle Division", division, pact, ussr, type=infantry),
+            Unit("94th Guards Motor Rifle Division", division, pact, ussr, type=infantry),
+            Unit("207th Motor Rifle Division", division, pact, ussr, type=infantry),
+        ]
     ),
     Unit(
         name="3rd Red Banner Army",
         size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["USSR"],
-        color="brown"
+        color="brown",
+        children=[
+            Unit("7th Guards Tank Division", division, pact, ussr, type=armor),
+            Unit("10th Guards Tank Division", division, pact, ussr, type=armor),
+            Unit("12th Guards Tank Division", division, pact, ussr, type=armor),
+            Unit("47th Guards Tank Division", division, pact, ussr, type=armor),
+        ]
     ),
     Unit(
         name="Nationale Volksarmee",
         size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["DDR"],
-        color="indianred"
+        color="indianred",
+        children=[
+            Unit("1st Motor Rifle Division", division, pact, ddr, type=infantry),
+            Unit("8th Motor Rifle Division", division, pact, ddr, type=infantry),
+            Unit("9th Panzer Division", division, pact, ddr, type=armor),
+            Unit("19th Motor Rifle Division", division, pact, ddr, type=infantry),
+            Unit("120th Motor Rifle Division", division, pact, ddr, type=infantry),
+        ]
     ),
     Unit(
         name="Northern Group of Forces",
         size=corps,
         team=TEAMS.PACT,
         country=COUNTRIES["PL"],
-        color="tomato"
+        color="tomato",
+        children=[
+            Unit("6th Guards Motor Rifle Division", division, pact, pl, type=infantry),
+            Unit("6th Guards Motor Rifle Division", division, pact, pl, type=infantry),
+            Unit("6th Guards Motor Rifle Division", division, pact, pl, type=infantry),
+        ]
     ),
     Unit(
         name="11th Guards Army Baltic Command",

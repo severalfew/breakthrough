@@ -15,7 +15,7 @@ def retrieve_locations():
             with open(location_file, "r") as fp:
                 data = json.load(fp)
         except FileNotFoundError:
-            data = geocoder.osm(row["name"]).osm
+            data = geocoder.osm(f"{row['name']}, {row['country']}").osm
 
         data["city_size"] = row["city_size"]
         data["team"] = row["team"]
