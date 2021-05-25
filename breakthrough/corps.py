@@ -227,27 +227,27 @@ for unit in gen:
         size = child.size.value
         ax.text(
             .45,
-            1.1 - .28 * i,
+            1.4 - .28 * i,
             f"[{size}] {child}",
             ha='left',
             va='center',
             fontsize="x-small"
         )
         ax.add_patch(patches.Rectangle(
-            (.1, 1.025 - .28 * i),
+            (.1, 1.325 - .28 * i),
             .3,
             .2,
             edgecolor="w",
             facecolor=unit.color,
         ))
         if child.type == infantry:
-            plt.plot([.1, .4], [1.025 - .28 * i, 1.225 - .28 * i], color="w")
-            plt.plot([.1, .4], [1.225 - .28 * i, 1.025 - .28 * i], color="w")
+            plt.plot([.1, .4], [1.325 - .28 * i, 1.525 - .28 * i], color="w")
+            plt.plot([.1, .4], [1.525 - .28 * i, 1.325 - .28 * i], color="w")
         elif child.type == armor:
-            plt.plot([.2, .3], [1.075 - .28 * i, 1.075 - .28 * i], color="w")
-            plt.plot([.2, .3], [1.175 - .28 * i, 1.175 - .28 * i], color="w")
+            plt.plot([.2, .3], [1.375 - .28 * i, 1.375 - .28 * i], color="w")
+            plt.plot([.2, .3], [1.475 - .28 * i, 1.475 - .28 * i], color="w")
             ax.add_patch(patches.Arc(
-                (.2, 1.125 - .28 * i),
+                (.2, 1.425 - .28 * i),
                 .1,
                 .1,
                 theta1=90,
@@ -255,7 +255,7 @@ for unit in gen:
                 color="w"
             ))
             ax.add_patch(patches.Arc(
-                (.3, 1.125 - .28 * i),
+                (.3, 1.425 - .28 * i),
                 .1,
                 .1,
                 theta1=270,
@@ -268,4 +268,5 @@ for unit in gen:
     plt.ylim(0, 2.5)
     ax.set_xticks([])
     ax.set_yticks([])
+    plt.tight_layout()
     plt.savefig(f"{os.path.join(image_path, unit.name)}.png")
